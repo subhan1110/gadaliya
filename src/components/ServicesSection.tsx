@@ -1,21 +1,21 @@
 import React from 'react';
-import { MessageCircle, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { MessageCircle, ArrowRight } from 'lucide-react';
 import { SHOP_OFFERINGS, SHOP_INFO } from '../data/shopData';
 
 export const ServicesSection: React.FC = () => {
   return (
-    <section id="services" className="py-16 md:py-24 bg-white border-b border-slate-200">
+    <section id="services" className="py-16 md:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading matching grexa.site */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
             Products & Services
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
             Services From The Best Mobile Phone Accessory Shop in Visnagar
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Discover our wide range of premium smartphone accessories, 360° hydrogel skins, display repairs, and quick digital services.
           </p>
           <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full mt-4"></div>
@@ -26,11 +26,11 @@ export const ServicesSection: React.FC = () => {
           {SHOP_OFFERINGS.map((item) => (
             <article
               key={item.id}
-              className="group bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-lg hover:border-blue-400 transition-all duration-300 flex flex-col justify-between"
+              className="group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs hover:shadow-lg hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Photo Header */}
-                <div className="relative h-52 w-full overflow-hidden bg-slate-100">
+                <div className="relative h-52 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
                   <img
                     src={item.imageUrl}
                     alt={item.title}
@@ -60,12 +60,12 @@ export const ServicesSection: React.FC = () => {
                 {/* Content */}
                 <div className="p-6 space-y-4">
                   {/* Gujarati text as featured on grexa.site */}
-                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-sans bg-slate-50 p-3.5 rounded-2xl border border-slate-100">
+                  <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-sans bg-slate-50 dark:bg-slate-800/60 p-3.5 rounded-2xl border border-slate-100 dark:border-slate-800">
                     {item.descriptionGu}
                   </p>
 
                   {/* English description */}
-                  <p className="text-xs text-slate-500 leading-relaxed">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                     {item.descriptionEn}
                   </p>
                 </div>
@@ -77,7 +77,7 @@ export const ServicesSection: React.FC = () => {
                   href={SHOP_INFO.whatsappUrl(`Hello Prakash bhai, I want to enquire about "${item.title}" at Gadaliya Mobile Visnagar.`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-[#25d366] text-white font-bold text-xs tracking-wide shadow-sm hover:shadow-md transition-all duration-200 group/btn"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-slate-900 dark:bg-slate-800 hover:bg-[#25d366] text-white font-bold text-xs tracking-wide shadow-sm hover:shadow-md transition-all duration-200 border border-transparent dark:border-slate-700 group/btn"
                 >
                   <MessageCircle className="w-4 h-4 fill-current text-[#25d366] group-hover/btn:text-white transition-colors" />
                   <span>Enquire on WhatsApp</span>

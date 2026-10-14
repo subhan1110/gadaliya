@@ -19,3 +19,20 @@ export interface RepairService {
   startingPrice: number;
   iconName: string;
 }
+
+export interface CustomerTestimonial {
+  id: string;
+  clientName: string;
+  clientCity: string;
+  clientAvatar?: string;
+  rating: number;
+  dateText: string;
+  deviceModel: string;
+  repairType: string;
+  category: 'screen' | 'battery' | 'motherboard' | 'water' | 'lamination';
+  repairedPhotoUrl: string;
+  repairHighlights: string[];
+  commentEn: string;
+  commentGu: string;
+  verifiedRepair: boolean;
+}

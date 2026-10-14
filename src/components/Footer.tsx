@@ -4,11 +4,11 @@ import { SHOP_INFO } from '../data/shopData';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-black border-t border-[#162238] text-slate-400 py-8">
+    <footer className="bg-slate-950 dark:bg-black border-t border-slate-800 dark:border-slate-900 text-slate-400 py-8 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           
-          {/* Left: Brand Identity matching screenshot */}
+          {/* Left: Brand Identity matching reference */}
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl border border-blue-500/40 bg-blue-950/30 flex items-center justify-center text-blue-400">
               <Smartphone className="w-4 h-4" />
@@ -18,12 +18,12 @@ export const Footer: React.FC = () => {
                 Gadaliya<span className="text-blue-500">Mobile</span>
               </div>
               <p className="text-[10px] text-slate-400">
-                Lamination | Repairing
+                Lamination | Repairing | Visnagar
               </p>
             </div>
           </div>
 
-          {/* Center: Navigation Links & Social Icons matching screenshot */}
+          {/* Center: Navigation Links & Social Icons */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-300">
             <a href="#home" className="hover:text-blue-400 transition-colors">
               Home
@@ -31,11 +31,14 @@ export const Footer: React.FC = () => {
             <a href="#services" className="hover:text-blue-400 transition-colors">
               Services
             </a>
-            <a href="#skin-studio" className="hover:text-blue-400 transition-colors">
-              Lamination
+            <a href="#skin-designs" className="hover:text-blue-400 transition-colors">
+              Skin Designs
             </a>
             <a href="#repairs" className="hover:text-blue-400 transition-colors">
               Repairing
+            </a>
+            <a href="#testimonials" className="hover:text-blue-400 transition-colors">
+              Reviews
             </a>
             <a href="#contact" className="hover:text-blue-400 transition-colors">
               Contact
@@ -74,7 +77,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Right: Copyright matching screenshot */}
+          {/* Right: Copyright */}
           <div className="text-xs text-slate-400 text-center lg:text-right">
             © 2026 Gadaliya Mobile. All rights reserved. Run by Prakash Gadaliya.
           </div>

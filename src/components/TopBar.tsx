@@ -4,7 +4,7 @@ import { SHOP_INFO } from '../data/shopData';
 
 export const TopBar: React.FC = () => {
   return (
-    <div className="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 hidden sm:block">
+    <div className="bg-slate-900 dark:bg-slate-950 text-slate-300 dark:text-slate-400 text-xs py-2 px-4 border-b border-slate-800 dark:border-slate-800/80 hidden sm:block transition-colors">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-1.5">

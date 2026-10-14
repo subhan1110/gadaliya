@@ -28,33 +28,33 @@ export const RepairEstimator: React.FC = () => {
   const getIcon = (name: string) => {
     switch (name) {
       case 'BatteryCharging':
-        return <BatteryCharging className="w-5 h-5 text-blue-600" />;
+        return <BatteryCharging className="w-5 h-5 text-blue-600 dark:text-blue-400" />;
       case 'Zap':
-        return <Zap className="w-5 h-5 text-blue-600" />;
+        return <Zap className="w-5 h-5 text-blue-600 dark:text-blue-400" />;
       case 'Camera':
-        return <Camera className="w-5 h-5 text-blue-600" />;
+        return <Camera className="w-5 h-5 text-blue-600 dark:text-blue-400" />;
       case 'Droplets':
-        return <Droplets className="w-5 h-5 text-blue-600" />;
+        return <Droplets className="w-5 h-5 text-blue-600 dark:text-blue-400" />;
       case 'Cpu':
-        return <Cpu className="w-5 h-5 text-blue-600" />;
+        return <Cpu className="w-5 h-5 text-blue-600 dark:text-blue-400" />;
       default:
-        return <Smartphone className="w-5 h-5 text-blue-600" />;
+        return <Smartphone className="w-5 h-5 text-blue-600 dark:text-blue-400" />;
     }
   };
 
   return (
-    <section id="repairs" className="py-20 border-b border-slate-200 bg-slate-50/70">
+    <section id="repairs" className="py-20 border-b border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/70 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="mb-12 text-center sm:text-left">
-          <div className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-2">
+          <div className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
             Speedy Repair Counter
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Repair Time & Quote Estimator
           </h2>
-          <p className="mt-2 text-slate-600 text-sm sm:text-base max-w-2xl">
+          <p className="mt-2 text-slate-600 dark:text-slate-300 text-sm sm:text-base max-w-2xl">
             Select your phone brand and the issue. Most repairs are resolved same-day at our Visnagar workshop by Prakash Gadaliya with genuine-tested replacement parts.
           </p>
           <div className="w-16 h-1 bg-blue-600 mt-4 rounded-full mx-auto sm:mx-0"></div>
@@ -62,7 +62,7 @@ export const RepairEstimator: React.FC = () => {
 
         {/* Brand Selector */}
         <div className="mb-8">
-          <label className="text-xs font-bold uppercase tracking-wider text-slate-700 block mb-3">
+          <label className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 block mb-3">
             1. Select Your Device Brand
           </label>
           <div className="flex flex-wrap gap-2">
@@ -73,7 +73,7 @@ export const RepairEstimator: React.FC = () => {
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border ${
                   selectedBrand === brand
                     ? 'bg-blue-600 border-blue-600 text-white shadow-sm'
-                    : 'bg-white border-slate-200 text-slate-700 hover:text-slate-900 hover:border-slate-300'
+                    : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-600'
                 }`}
               >
                 {brand}
@@ -92,35 +92,35 @@ export const RepairEstimator: React.FC = () => {
                 onClick={() => setSelectedService(srv)}
                 className={`p-5 rounded-2xl border text-left flex flex-col justify-between transition-all duration-200 shadow-xs ${
                   isSelected
-                    ? 'bg-blue-50/70 border-blue-600 shadow-md ring-1 ring-blue-600'
-                    : 'bg-white border-slate-200 hover:border-slate-300'
+                    ? 'bg-blue-50/70 dark:bg-blue-950/40 border-blue-600 ring-1 ring-blue-600 shadow-md'
+                    : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700'
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <div className="p-2.5 rounded-xl bg-blue-50 border border-blue-100">
+                    <div className="p-2.5 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-100 dark:border-blue-900/60">
                       {getIcon(srv.iconName)}
                     </div>
-                    <span className="text-xs font-mono font-bold text-blue-600">
+                    <span className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">
                       From ₹{srv.startingPrice}
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-bold text-base text-slate-900 mb-1.5">
+                  <h3 className="font-heading font-bold text-base text-slate-900 dark:text-white mb-1.5">
                     {srv.title}
                   </h3>
 
-                  <p className="text-xs text-slate-500 leading-relaxed mb-4">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
                     {srv.description}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-600">
+                <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-300">
                   <span className="flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-blue-600" />
+                    <Clock className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                     {srv.timeEstimate}
                   </span>
-                  <span className="flex items-center gap-1 text-emerald-600 font-medium">
+                  <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-medium">
                     <ShieldCheck className="w-3.5 h-3.5" />
                     {srv.warranty}
                   </span>

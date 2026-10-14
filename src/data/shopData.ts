@@ -16,6 +16,13 @@ export const SHOP_INFO = {
   phoneRaw: '9173309034',
   phoneFormatted: '+91 91733 09034',
   phoneDial: '+919173309034',
+  prakashPhoneRaw: '9173309034',
+  prakashPhoneFormatted: '+91 91733 09034',
+  prakashPhoneDial: '+919173309034',
+  farhanName: 'Farhan',
+  farhanPhoneRaw: '6354085390',
+  farhanPhoneFormatted: '+91 63540 85390',
+  farhanPhoneDial: '+916354085390',
   instagramHandle: '@gadaliya_mobile_skin',
   instagramUrl: 'https://instagram.com/gadaliya_mobile_skin',
   shopNumber: 'Shop No. 12, Main Market, Visnagar',
@@ -35,6 +42,12 @@ export const SHOP_INFO = {
       ? encodeURIComponent(msg)
       : encodeURIComponent('Hello Prakash bhai, I want to inquire about mobile skins, lamination, and repairing at Gadaliya Mobile Visnagar.');
     return `https://wa.me/919173309034?text=${text}`;
+  },
+  farhanWhatsappUrl: (msg?: string) => {
+    const text = msg
+      ? encodeURIComponent(msg)
+      : encodeURIComponent('Hello Farhan bhai, I want to inquire about mobile skins, lamination, and repairing at Gadaliya Mobile Visnagar.');
+    return `https://wa.me/916354085390?text=${text}`;
   },
 };
 
