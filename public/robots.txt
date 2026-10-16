@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gadaliyamobile.vercel.app/sitemap.xml
